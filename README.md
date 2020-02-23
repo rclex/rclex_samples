@@ -1,2 +1,5 @@
-# rclex_samples
-Samples for RclEx
+# RclexSamples
+
+Sample codes for [RclEx](https://github.com/tlk-emb/rclex)
+
+
