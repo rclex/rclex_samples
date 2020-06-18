@@ -2,7 +2,7 @@ defmodule PubSample do
   @moduledoc """
     任意の数のPublisherを作成するサンプル
   """
-  def pubmain(num_node) do
+  def pub_main(num_node) do
     context = RclEx.rclexinit
     node_list = RclEx.create_nodes(context,'test_pub_node',num_node)
     publisher_list = RclEx.create_publishers(node_list,'testtopic',:single)
@@ -20,7 +20,7 @@ defmodule PubSample do
   @doc """
     ユーザー定義のタイマーイベントコールバック関数
   """
-  def callback(publisher_list) do
+  def call_back(publisher_list) do
     #publisherのかずに応じてメッセージを作成する
     n = length(publisher_list)
     msg_list = RclEx.initialize_msgs(n,:string)

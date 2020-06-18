@@ -18,6 +18,7 @@ defmodule PubSubSample do
     RclEx.node_finish(node_list)
     RclEx.shutdown(context)
   end
+
   def pub_callback(publisher_list) do
     n = length(publisher_list)
     msg_list = RclEx.initialize_msgs(n,:string)

@@ -1,10 +1,10 @@
-defmodule Multitopic do
+defmodule MultiTopic do
   @moduledoc """
     publisher-topic-subscriberのペアを任意の数だけ作成するサンプル
     create_publishersの引数に:multiを指定
     別VMでそれぞれ出版購読させることを想定
   """
-  def pubmain(num_node) do
+  def pub_main(num_node) do
     context = RclEx.rclexinit
     node_list = RclEx.create_nodes(context,'test_pub_node',num_node)
     publisher_list = RclEx.create_publishers(node_list,'topic',:multi)
@@ -19,7 +19,6 @@ defmodule Multitopic do
     ユーザー定義のタイマーイベントコールバック関数
   """
   def timer_callback(publisher_list) do
-
     n = length(publisher_list)
     msg_list = RclEx.initialize_msgs(n,:string)
     data = "hello,world"
@@ -31,8 +30,7 @@ defmodule Multitopic do
     RclEx.Publisher.publish(publisher_list,msg_list)
   end
 
-  def submain(num_node) do
-
+  def sub_main(num_node) do
     context = RclEx.rclexinit()
     node_list = RclEx.create_nodes(context,'test_sub_node',num_node)
     subscriber_list = RclEx.create_subscribers(node_list,'topic',:multi)
@@ -42,6 +40,7 @@ defmodule Multitopic do
     RclEx.node_finish(node_list)
     RclEx.shutdown(context)
   end
+
   #コールバック関数を記述
   def callback_sub(msg) do
     received_msg = RclEx.readdata_string(msg)
