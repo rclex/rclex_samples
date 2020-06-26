@@ -1,4 +1,4 @@
 %{
   "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm", "d522695b93b7f0b4c0fcb2dfe73a6b905b1c301226a5a55cb42e5b14d509e050"},
-  "rclex": {:git, "https://github.com/tlk-emb/rclex", "96af72a14d8fba12064385ab4363dfe415b10918", [branch: "refactoring"]},
+  "rclex": {:hex, :rclex, "0.3.0", "944410b8734983f60335473b74795e0ce9cfe736a3ffb43832fd8bdef89c3543", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "3e2bad1e222e559935c61287012f52ac4e31e3d9653e6cb8777dac47e51097eb"},
 }
