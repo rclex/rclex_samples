@@ -1,6 +1,6 @@
 defmodule RclexSamples.SimplePubSub do
   @moduledoc """
-    Publisher,Subscriber両方の役割をノードにもたせるサンプル
+    The sample which makes nodes as Publisher and Subscriber.
   """
   def main(num_node) do
     context = RclEx.rclexinit()
@@ -27,16 +27,16 @@ defmodule RclexSamples.SimplePubSub do
     n = length(publisher_list)
     msg_list = RclEx.initialize_msgs(n, :string)
     data = "hello,world"
-    # データをセット
+    # Set data.
     Enum.map(0..(n - 1), fn index ->
       RclEx.setdata(Enum.at(msg_list, index), data, :string)
     end)
 
-    # 出版
+    # Publish topics.
     RclEx.Publisher.publish(publisher_list, msg_list)
   end
 
-  # コールバック関数を記述
+  # Describe callback function.
   def sub_callback(msg) do
     received_msg = RclEx.readdata_string(msg)
     IO.puts("received msg:#{received_msg}")
