@@ -1,9 +1,9 @@
 defmodule RclexSamples.SimpleSub do
   @moduledoc """
-    任意の数のサブスクライバを作成するサンプル
+    The sample which makes any number of subscribers.
   """
   def sub_main(num_node) do
-    # ノードをnum_nodeに指定した数だけ作成
+    # Create as many nodes as you specify in num_node
     context = RclEx.rclexinit()
     node_list = RclEx.create_nodes(context, 'test_sub_node', num_node)
     subscriber_list = RclEx.create_subscribers(node_list, 'testtopic', :single)
@@ -15,7 +15,7 @@ defmodule RclexSamples.SimpleSub do
     RclEx.shutdown(context)
   end
 
-  # コールバック関数を記述
+  # Describe callback function.
   def callback(msg) do
     # IO.puts("sub time:#{:os.system_time(:microsecond)}")
     received_msg = RclEx.readdata_string(msg)
