@@ -1,8 +1,8 @@
 defmodule RclexSamples.MultiTopic do
   @moduledoc """
-    publisher-topic-subscriberのペアを任意の数だけ作成するサンプル
-    create_publishersの引数に:multiを指定
-    別VMでそれぞれ出版購読させることを想定
+    The sample which makes any number of publisher-topic-subscriber pairs.
+    Specify :multi as an argument to create_publishers.
+    It is assumed publishing and subscribing between different VMs.
   """
   def pub_main(num_node) do
     context = RclEx.rclexinit()
@@ -17,18 +17,18 @@ defmodule RclexSamples.MultiTopic do
   end
 
   @doc """
-    ユーザー定義のタイマーイベントコールバック関数
+    Timer event callback function defined by user.
   """
   def timer_callback(publisher_list) do
     n = length(publisher_list)
     msg_list = RclEx.initialize_msgs(n, :string)
     data = "hello,world"
-    # データをセット
+    # Set data.
     Enum.map(0..(n - 1), fn index ->
       RclEx.setdata(Enum.at(msg_list, index), data, :string)
     end)
 
-    # 出版
+    # Publish topics.
     RclEx.Publisher.publish(publisher_list, msg_list)
   end
 
@@ -43,7 +43,7 @@ defmodule RclexSamples.MultiTopic do
     RclEx.shutdown(context)
   end
 
-  # コールバック関数を記述
+  # Describe callback function.
   def callback_sub(msg) do
     received_msg = RclEx.readdata_string(msg)
     IO.puts("received msg:#{received_msg}")
