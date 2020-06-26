@@ -4,7 +4,7 @@ defmodule RclexSamples.MixProject do
   def project do
     [
       app: :rclex_samples,
-      version: "0.1.0",
+      version: "0.3.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -22,9 +22,8 @@ defmodule RclexSamples.MixProject do
   defp deps do
     [
       # NOTE: we specify GitHub link since Rclex is now under development
-      # {:rclex, "~> 0.0.1"},
-      # {:rclex, git: "https://github.com/tlk-emb/rclex", branch: "refactoring"}
-      {:rclex, path: "../rclex"}
+      # {:rclex, path: "../rclex"}
+      {:rclex, "~> 0.3.0"},
 
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
