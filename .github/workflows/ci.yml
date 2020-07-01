@@ -1,6 +1,6 @@
 on: [push, pull_request]
 jobs:
-  elixir_test:
+  rclex_test:
     runs-on: ubuntu-latest
     container: ros:dashing
 
