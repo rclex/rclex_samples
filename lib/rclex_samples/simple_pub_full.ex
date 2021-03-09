@@ -1,4 +1,4 @@
-defmodule RclexSamples.SimplePubRosjp do
+defmodule RclexSamples.SimplePubFull do
   @moduledoc """
     The sample which makes any number of publishers.
   """
