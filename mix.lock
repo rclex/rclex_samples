@@ -1,4 +1,4 @@
 %{
-  "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm", "d522695b93b7f0b4c0fcb2dfe73a6b905b1c301226a5a55cb42e5b14d509e050"},
-  "rclex": {:hex, :rclex, "0.3.0", "944410b8734983f60335473b74795e0ce9cfe736a3ffb43832fd8bdef89c3543", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "3e2bad1e222e559935c61287012f52ac4e31e3d9653e6cb8777dac47e51097eb"},
+  "elixir_make": {:hex, :elixir_make, "0.6.2", "7dffacd77dec4c37b39af867cedaabb0b59f6a871f89722c25b28fcd4bd70530", [:mix], [], "hexpm", "03e49eadda22526a7e5279d53321d1cced6552f344ba4e03e619063de75348d9"},
+  "rclex": {:hex, :rclex, "0.3.1", "2b5ce168a525b017d736bc4474ac3e6fb12a583f9f21f919db2a4723867f0aa6", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "ac616c9209fef60b96e708a60b4d6f908ddca7dc3be5b742a1ff0d8984269c01"},
 }
