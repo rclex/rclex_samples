@@ -23,7 +23,7 @@ defmodule RclexSamples.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rclex, "~> #{@version}"},
+      {:rclex, "~> #{@version}"}
 
       # NOTE: use the follow when you want to specify local directory for development time
       # {:rclex, path: "../rclex"}

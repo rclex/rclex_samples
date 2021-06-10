@@ -7,7 +7,6 @@ defmodule RclexSamples.SimplePubFull do
     |> Rclex.create_nodes('test_pub_node', num_node)
     |> Rclex.create_publishers('testtopic', :single)
     |> Rclex.Timer.timer_start(1000, &pub_func/1)
-
   end
 
   @doc """
