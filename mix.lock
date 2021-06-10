@@ -1,4 +1,4 @@
 %{
   "elixir_make": {:hex, :elixir_make, "0.6.2", "7dffacd77dec4c37b39af867cedaabb0b59f6a871f89722c25b28fcd4bd70530", [:mix], [], "hexpm", "03e49eadda22526a7e5279d53321d1cced6552f344ba4e03e619063de75348d9"},
-  "rclex": {:hex, :rclex, "0.3.1", "2b5ce168a525b017d736bc4474ac3e6fb12a583f9f21f919db2a4723867f0aa6", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "ac616c9209fef60b96e708a60b4d6f908ddca7dc3be5b742a1ff0d8984269c01"},
+  "rclex": {:hex, :rclex, "0.4.0", "11be2009f8a433bc526b1f7c42e9e07fa92f520effd20cd37f032a67c116ee43", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "e98cf0735a20137e0a5e70f429a9554b409bc6d3cc750d320f5a46331b312ec9"},
 }
